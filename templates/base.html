@@ -1,0 +1,19 @@
+{% extends "bootstrap/base.html" %}
+{%block title%}
+    {%if title%}
+        <title>{{ title }}</title>
+    {%else%}
+        <title>flask app</title>
+    {%endif%}
+{%endblock%}
+
+{% block navbar %}
+    {%include 'navbar.html'%}
+{% endblock %}
+
+{% block content %}
+  <div class="container">
+      {%block app_content%}
+      {%endblock%}
+  </div>
+{% endblock %}
